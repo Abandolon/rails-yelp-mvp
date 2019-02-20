@@ -1,0 +1,38 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
+body {
+  background-color: #A8A674;
+  color: #1B1E15;
+}
+
+.title {
+  text-align: center
+}
+
+.container {
+  width: 550px;
+  background-color: #A6A99A;
+  box-shadow: 0 0 25px #8A8E8B;
+  padding-bottom: 25px;
+}
+
+.row {
+  padding-left: 88px;
+}
+$link-color: #1B1E15;
+$link-hover-color: #A8A674;
+

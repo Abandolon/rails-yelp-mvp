@@ -1,0 +1,25 @@
+<div class="card">
+  <h2 class="card-header"> <%= @restaurant.name %></h2>
+  <p> Wish To Update This Restaurant? <%= link_to "Click to Update",
+    edit_restaurant_path(@restaurant), class: "btn btn-success btn-sm" %></p>
+  <p class="card-text">Cuisine: <%= @restaurant.category.capitalize %></p>
+  <p class="card-text">Address: <strong><%= @restaurant.address %></strong> </p>
+  <p class="card-text">Phone: <em><%= @restaurant.phone_number %></em></p>
+  <div class="card-review">
+    <h3 class="card-review-header">Our Latest Reviews</h3>
+    <p class="card-review-text">
+      <ul class="panel panel-default">
+        <% @restaurant.reviews.each do |review| %>
+           <div class="panel-heading">
+             <h4 class="panel-title"> Rating: <%= review.rating %> Stars</h4>
+             <p class="panel-body"><%= review.content %></p>
+           </div>
+          <% end %>
+      </ul>
+      <%= link_to "Write A Review", new_restaurant_review_path(@restaurant), class: "btn btn-success btn-sm"  %>
+    </p>
+  </div>
+  <div class="footer">
+    <p><%= link_to "Back To Restaurants", restaurants_path, class: "btn btn-primary btn-sm"  %></p>
+  </div>
+</div>

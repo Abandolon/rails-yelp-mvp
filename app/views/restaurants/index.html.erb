@@ -1,0 +1,15 @@
+<div class="title">
+  <h2>Welcome To Our Restaurants!</h2>
+  <h4>Here Are the Restaurants We Have</h4>
+  <p>Don't See Your Restaurant? <%= link_to "Add It Here", new_restaurant_path, class: "btn btn-primary" %></p>
+</div>
+
+<!--   <ul class="list-group"> -->
+    <div class="row">
+  <% @restaurants.each do |restaurant| %>
+      <dt class="col-sm-8"><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+      <dd class="col-sm-4"> <%= link_to "🗑", restaurant_path(restaurant), method: :delete %></li>
+      <% end %>
+    </div>
+<!--   </ul>
+ -->
